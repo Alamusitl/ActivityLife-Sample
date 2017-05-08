@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import com.ksc.life.R;
 
 public class SecondActivity extends Activity {
 

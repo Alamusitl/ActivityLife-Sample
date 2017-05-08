@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ksc.life">
+          package="com.owl.example.life">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.ksc.com.owl.example.life.MainActivity"
+            android:name="com.owl.example.life.MainActivity"
             android:screenOrientation="sensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ksc.com.owl.example.life.SecondActivity"
+            android:name="com.owl.example.life.SecondActivity"
             android:screenOrientation="sensor">
         </activity>
     </application>
