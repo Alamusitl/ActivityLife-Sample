@@ -23,6 +23,27 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.id_btn_to_appcompat).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AppCompatLifeCycle.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.id_btn_to_dialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.id_btn_to_transparent).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TransparentActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
