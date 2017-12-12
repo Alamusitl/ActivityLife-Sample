@@ -28,6 +28,9 @@
         <activity
             android:name=".TransparentActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+        <activity
+            android:name=".SingleActivity"
+            android:launchMode="singleInstance"/>
     </application>
 
 </manifest>

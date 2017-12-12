@@ -1,10 +1,16 @@
 package com.owl.example.life;
 
 import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Process;
 import android.util.Log;
 import android.view.View;
+
+import java.util.List;
 
 
 public class MainActivity extends Activity {
@@ -44,6 +50,28 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        findViewById(R.id.id_btn_to_single).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SingleActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Log.i(TAG, "process Id: " + Process.myPid());
+        Log.i(TAG, "user Id: " + Process.myUid());
+        Log.i(TAG, "thread Id: " + Process.myTid());
+
+        ActivityManager am = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            assert am != null;
+            List<ActivityManager.AppTask> appTasks = am.getAppTasks();
+            for (ActivityManager.AppTask task :
+                    appTasks) {
+                Log.i(TAG, "" + task.getTaskInfo().id);
+            }
+        }
     }
 
     @Override
